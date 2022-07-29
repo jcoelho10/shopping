@@ -1,0 +1,8 @@
+1643057614115	Delete element
+1643058061681	Delete elements
+1643155184876	Rename type 'App'
+1643157589907	Rename type 'product_api'
+1643158960256	Rename resource 'V1__create_category_table.sql'
+1643158968625	Rename resource 'V2__create_product_table.sql'
+1643158977482	Rename resource 'V3__insert_categories.sql'
+1643160462747	Rename resource 'migrations'

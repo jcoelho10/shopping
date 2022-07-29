@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+E:\Programação\Workspaces\Casa do Codigo\Shopping\.metadata\.plugins\org.eclipse.jdt.core
+1581669238.index
+1865797976.index
+2422777910.index
+2772403209.index

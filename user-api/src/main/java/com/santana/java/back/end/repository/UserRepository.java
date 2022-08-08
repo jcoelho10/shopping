@@ -12,5 +12,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	User findByCpf(String cpf);
 	
-	List<User> queryByNameLike(String name);
+	List<User> queryByNomeLike(String name);
 }

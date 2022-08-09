@@ -78,7 +78,7 @@ public class UserService {
 	//nome tiver valor Mar%, a busca retornará pessoas com o nome Marcela,
 	//Marcelo ou Marcos.
 	public List<UserDTO> queryByName(String name) {
-		List<User> usuarios = userRepository.queryByNameLike(name);
+		List<User> usuarios = userRepository.queryByNomeLike(name);
 		
 		return usuarios.stream().map(UserDTO::convert).collect(Collectors.toList());
 	}

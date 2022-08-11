@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.santana.java.back.end.dto.ShopDTO;
+import com.santana.java.back.end.dto.ShopReportDTO;
 import com.santana.java.back.end.model.Shop;
+import com.santana.java.back.end.repository.ReportRepository;
 import com.santana.java.back.end.repository.ShopRepository;
 
 @Service
@@ -17,6 +19,9 @@ public class ShopService {
 	
 	@Autowired
 	private ShopRepository shopRepository;
+	
+	@Autowired
+	private ReportRepository reportRepository;
 	
 	public List<ShopDTO> getAll() {
 		List<Shop> shops = shopRepository.findAll();
@@ -54,5 +59,17 @@ public class ShopService {
 		shop = shopRepository.save(shop);
 		
 		return ShopDTO.convert(shop);
+	}
+	
+	public List<ShopDTO> getShopsByFilter(Date dataInicio, Date dataFim, Float valorMinimo) {
+		
+		List<Shop> shops = reportRepository.getShopByFilters(dataInicio, dataFim, valorMinimo);
+		
+		return shops.stream().map(ShopDTO::convert).collect(Collectors.toList());
+	};
+	
+	public ShopReportDTO getReportByDate(Date dataInicio, Date dataFim) {
+		
+		return reportRepository.getReportByDate(dataInicio, dataFim);
 	}
 }

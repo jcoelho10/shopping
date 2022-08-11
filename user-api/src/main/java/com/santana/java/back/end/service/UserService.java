@@ -14,7 +14,7 @@ import com.santana.java.back.end.repository.UserRepository;
 @Service
 public class UserService {
 
-	//@Autowire - Essa anotação serve para fazer injeção de dependências
+	//@Autowired - Essa anotação serve para fazer injeção de dependências
 	@Autowired
 	private UserRepository userRepository;
 	

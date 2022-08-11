@@ -4,6 +4,17 @@ import javax.persistence.Embeddable;
 
 import com.santana.java.back.end.dto.ItemDTO;
 
+
+/**
+ * 
+ * @author josen
+ * 
+ * utilizamos a anotação @Embeddable,
+ * indicando que ela pode ser embutida em uma entidade. Uma classe com a
+ * anotação @Embeddable não tem vida própria, ela sempre depende de uma
+ * entidade, isto é, de uma classe que tenha a anotação @Entity
+ *
+ */
 @Embeddable
 public class Item {
 
